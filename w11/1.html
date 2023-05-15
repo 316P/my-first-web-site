@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <h1>림버스 컴퍼니</h1>
+    <h2>등장인물</h2>
+    <h3>수감자</h3>
+    <input
+      id="night_day_1"
+      type="button"
+      value="day"
+      onclick="
+    var target = document.querySelector('body');      
+    if(this.value == 'day'){
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night';
+      document.querySelector('#night_day_2').value = 'night';
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while (i < alist.length) {
+        alist[i].style.color = 'blue';
+        i = i + 1;
+      }     
+    } else {
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
+      document.querySelector('#night_day_2').value = 'day';
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while (i < alist.length) {
+        alist[i].style.color = 'powderblue';
+        i = i + 1;
+      }   
+    }"
+    />
+    <script>
+      const origin = [
+        "날개(소설)",
+        "파우스트(희곡)",
+        "돈키호테",
+        "지옥변",
+        "이방인(소설)",
+        "홍루몽",
+        "폭풍의 언덕",
+        "모비딕",
+        "죄와 벌",
+        "데미안",
+        "오디세이아",
+        "변신(소설)",
+        "신곡",
+      ];
+      var i = 0;
+      var number = 1;
+      while (i < 13) {
+        document.write(
+          '<li><a href="https://namu.wiki/w/' +
+            origin[i] +
+            '">' +
+            origin[i] +
+            "</li>"
+        );
+        i = i + 1;
+      }
+    </script>
+  </body>
+</html>
